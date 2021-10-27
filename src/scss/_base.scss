@@ -1,0 +1,46 @@
+// Nollställer styling i webbläsaren
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+// Typsnitt
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=Roboto&display=swap');
+
+
+// Variabler
+$background-color: #3A5D7B;
+// $background-gradient: linear-gradient(#023B5F, #3A5D7B);
+
+// $background-gradient: linear-gradient(rgb(74, 44, 75), #023B5F, #3A5D7B);
+$background-gradient: linear-gradient(#001d30, #023B5F, #3A5D7B);
+$dark-color: #023B5F;
+$odd-color: #1F7DAA;
+// $link-color: rgb(255, 200, 98);
+$link-color: lighten(rgb(74, 44, 75), 70);
+$green: rgb(74, 44, 75);
+
+// Mixins
+
+
+// Mixins
+@mixin desktop {
+    @media screen and (min-width: 900px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 900px){
+        @content;
+    }
+}
+
+@mixin small-table {
+    @media screen and (max-width: 700px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amandas CV/Portfolio</title>
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>amandas portfolio</h1>
+    </header>
+    <nav>
+        <ul class="flex-container">
+            <li><a href="#courses-h2">utbildning</a></li>
+            <li><a href="#jobs-h2">anställningar</a></li>
+            <li><a href="#portfolio-h2">portfolio</a></li>
+            <li><a href="#about-h2">om mig</a></li>
+            <li><a href="#contact-h2">kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="flex-container">
+            <section id="intro-text">
+                <h2>Välkommen!</h2>
+                <p>Vad kul att du har hittat in här! Mitt namn är Amanda Hwatz Björkholm och detta är mitt CV/Portfolio.
+                </p>
+
+                <p>På denna sida kommer du hitta vad jag har för utbildning i form av en kurslista, en lista över mina
+                    tidigare anställningar samt en lista med de webbsidor jag har skapat hittills. Samtliga webbsidor är
+                    i samband med mina studier (än så länge).</p>
+
+                <p>Jag går just nu webbutvecklingsprogrammet på Mittuniversitetet. Jag förväntas ta examen
+                    sommaren 2022!</p>
+            </section>
+            <div class="img-container"><img src="images/profile-1.jpeg" alt="Foto på Amanda"></div>
+        </div>
+
+        <section>
+            <h2>Kompetenser</h2>
+            <div><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i><i
+                    class="fab fa-php"></i></div>
+        </section>
+
+        <section>
+            <h2 id="courses-h2">Utbildning</h2>
+            <div>
+                <h3>kurser</h3>
+                <table id="courses"></table>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="jobs-h2">Anställningar</h2>
+            <div>
+                <h3>anställningar</h3>
+                <div id="jobs"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="portfolio-h2">Portfolio</h2>
+            <div>
+                <h3>webbsidor</h3>
+                <div id="portfolio"></div>
+            </div>
+        </section>
+
+        <div>
+            <h2 id="about-h2">Om mig</h2>
+            <div class="flex-container">
+                <div class="img-container"><img src="images/profile-2.jpeg" alt="Foto på Amanda när hon seglar"></div>
+
+                <section id="about-text">
+                    <h3>Hej från segelbåten</h3>
+                    <p>Jag är en glad 28-åring bosatt i Norrtälje. Här bor jag med min sambo och vi är ett aktivt par!
+                        Jag
+                        har många intressen men de största är träning, måla/teckna, segla, vandra längst leder i skogen
+                        och såklart att skriva kod.</p>
+
+                    <p>Efter åtta år på Kappahl har jag äntligen sadlat om och ser mycket fram emot att börja arbeta
+                        som webbutvecklare!</p>
+                </section>
+                
+            </div>
+        </div>
+
+        <section>
+            <h2 id="contact-h2">Kontakt</h2>
+            <div>
+                <form>
+                    <label for="email">e-post</label>
+                    <input type="text" id="email" placeholder="andersson@gmail.com">
+
+                    <label for="subject">ämne</label>
+                    <input type="text" id="subject" placeholder="Jag behöver en webbsida">
+
+                    <label for="message">meddelande</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="skicka" class="submit-btn">
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Ikoner från fontawesome -->
+    <script src="https://kit.fontawesome.com/be0f6fe16e.js" crossorigin="anonymous"></script>
+    <script src="js/js/main.js"></script>
+</body>
+
+</html>

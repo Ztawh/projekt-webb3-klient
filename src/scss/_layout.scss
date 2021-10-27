@@ -1,0 +1,186 @@
+
+header {
+    text-align: center;
+    padding: 4rem 0;
+    background: $background-gradient;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        width: fit-content;
+        margin: auto;
+    }
+
+    a {
+        padding: 1rem;
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem 1rem 2rem 1rem;
+}
+
+#intro-text {
+    background: white;
+    border-radius: 60px;
+    color: black;
+    padding: 4rem;
+    flex: 2;
+
+    h2 {
+        text-align: left;
+    }
+}
+
+.img-container {
+    flex: 1;
+   
+
+    img {
+        // width: 100%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 100%;
+        object-position: 50% 10%; // Positionerar bilden
+    }
+}
+
+section {
+    width: 100%;
+    margin: 1rem auto 4rem auto;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    h3 {
+        margin-top: 0.5rem;
+    }
+
+    // Alla ikoner i flödet
+    i {
+        font-size: 3rem;
+        margin: 0.5rem;
+    }
+}
+
+// Tabell
+table {
+    // Ta bort vit linje mellan alla td
+    overflow: auto;
+    border-collapse: collapse;
+
+    // Gör varannan rad mörkare
+    tbody:nth-of-type(even){
+        tr{
+            background: $odd-color; 
+        } 
+    }
+
+    th {
+        text-align: left;
+        font-weight: 400;
+        padding: 0.5rem;
+        width: 40%;
+    }
+
+    td {
+        padding: 0.5rem;
+        width: 40%;
+    }
+
+    .school-table {
+        width: 20%;
+    }
+
+    .code-table {
+        width: 10%;
+    }
+
+    .center {
+        text-align: center;
+        width: 10%;
+    }
+}
+
+// Jobb / webbsidor
+// Gör varannan blå
+.job:nth-of-type(odd), .website:nth-of-type(odd) {
+    background: $odd-color; 
+}
+
+// Jobb
+.job {
+    padding: 1.5rem;
+
+    .job-headers {
+        margin-right: 1rem;
+        flex: 1;
+    }
+
+    .job-text {
+        flex: 3;
+    }
+
+    span {
+        margin-top: 1rem;
+        text-align: right;
+        display: block;
+    }
+}
+
+// Webbsidor
+.website {
+    padding: 1.5rem;
+
+    .website-title {
+        flex: 1;
+    }
+
+    .website-text {
+        flex: 3;
+    }
+
+    .link-container {
+        text-align: right;
+        margin-top: 1rem;
+
+        a {
+            color: $link-color;
+            transition: 0.2s;
+
+            @include desktop {
+                &:hover {
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+}
+
+// About
+
+#about-h2 {
+    text-align: center;
+}
+
+#about-text {
+    @extend #intro-text;
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        background: transparent;
+        color: black;
+    }
+}
