@@ -16,10 +16,7 @@ window.addEventListener("load", getPortfolio);
 // Göm menyn när sidan laddas
 window.addEventListener("load", () => {
     navEl.style.display = "none";
-})
-
-
-
+});
 
 // Hamburgemeny-ikon
 hamburgerEl.addEventListener("click", toggleNav);
@@ -36,7 +33,7 @@ function getCourses() {
     coursesEl.innerHTML = "";
 
     // Hämta alla kurser från webbtjänsten med fetch
-    fetch("http://localhost:8080/projekt-webbtjanst/courses.php")
+    fetch("https://studenter.miun.se/~amhv2000/writeable/projekt-webbtjanst/courses.php")
         .then(response => response.json())
         .then(data => {
             coursesEl.innerHTML += `
@@ -97,7 +94,7 @@ function getJobs() {
     jobsEl.innerHTML = "";
 
     // Hämta alla kurser från webbtjänsten med fetch
-    fetch("http://localhost:8080/projekt-webbtjanst/jobs.php")
+    fetch("https://studenter.miun.se/~amhv2000/writeable/projekt-webbtjanst/jobs.php")
         .then(response => response.json())
         .then(data => {
             data.forEach(jobs => {
@@ -148,7 +145,7 @@ function getPortfolio() {
     portfolioEl.innerHTML = "";
 
     // Hämta alla kurser från webbtjänsten med fetch
-    fetch("http://localhost:8080/projekt-webbtjanst/websites.php")
+    fetch("https://studenter.miun.se/~amhv2000/writeable/projekt-webbtjanst/websites.php")
         .then(response => response.json())
         .then(data => {
             data.forEach(websites => {
