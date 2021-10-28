@@ -12,18 +12,35 @@
     <header>
         <h1>amandas portfolio</h1>
     </header>
-    <nav>
-        <ul class="flex-container">
-            <li><a href="#courses-h2">utbildning</a></li>
-            <li><a href="#jobs-h2">anställningar</a></li>
-            <li><a href="#portfolio-h2">portfolio</a></li>
-            <li><a href="#about-h2">om mig</a></li>
-            <li><a href="#contact-h2">kontakt</a></li>
-        </ul>
-    </nav>
+    <div id="hamburger-icon" class="hide-desktop"><i class="fas fa-bars"></i></div>
+
+    <div class="nav-container hide-desktop">
+        
+        <nav id="navigation">
+            <ul class="flex-container">
+                <li><a href="#courses-h2">utbildning</a></li>
+                <li><a href="#jobs-h2">anställningar</a></li>
+                <li><a href="#portfolio-h2">portfolio</a></li>
+                <li><a href="#about-h2">om mig</a></li>
+                <li><a href="#contact-h2">kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="nav-container hide-tablet">
+        <nav>
+            <ul class="flex-container">
+                <li><a href="#courses-h2">utbildning</a></li>
+                <li><a href="#jobs-h2">anställningar</a></li>
+                <li><a href="#portfolio-h2">portfolio</a></li>
+                <li><a href="#about-h2">om mig</a></li>
+                <li><a href="#contact-h2">kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
-        <div class="flex-container">
+        <div class="flex-container intro-container">
             <section id="intro-text">
                 <h2>Välkommen!</h2>
                 <p>Vad kul att du har hittat in här! Mitt namn är Amanda Hwatz Björkholm och detta är mitt CV/Portfolio.
@@ -39,10 +56,19 @@
             <div class="img-container"><img src="images/profile-1.jpeg" alt="Foto på Amanda"></div>
         </div>
 
-        <section>
+        <section id="icon-section">
             <h2>Kompetenser</h2>
-            <div><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js"></i><i
-                    class="fab fa-php"></i></div>
+            <div id="icon-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-php"></i>
+                <div class="img-icon"><img src="images/illustrator.png" alt="Ikon för Adobe Illustartor"></div>
+                <div class="img-icon"><img src="images/photoshop.png" alt="Ikon för Adobe Photoshop"></div>
+                <div class="img-icon"><img src="images/xd.png" alt="Ikon för Adobe Xd"></div>
+                <div class="img-icon"><img src="images/sql-file-symbol.png" alt="Ikon för SQL"></div>
+
+            </div>
         </section>
 
         <section>
@@ -71,7 +97,7 @@
 
         <div>
             <h2 id="about-h2">Om mig</h2>
-            <div class="flex-container">
+            <div class="flex-container about-container">
                 <div class="img-container"><img src="images/profile-2.jpeg" alt="Foto på Amanda när hon seglar"></div>
 
                 <section id="about-text">
@@ -84,7 +110,7 @@
                     <p>Efter åtta år på Kappahl har jag äntligen sadlat om och ser mycket fram emot att börja arbeta
                         som webbutvecklare!</p>
                 </section>
-                
+
             </div>
         </div>
 
@@ -107,10 +133,21 @@
         </section>
     </main>
 
+    <footer>
+        <div><span><i class="far fa-copyright"></i> Amanda Hwatz Björkholm - 2021</span></div>
+        <div><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-github"></i></a></div>
+        <div>Ikonerna Ai, Ps och SQL. Made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </footer>
+
 
 
     <!-- Ikoner från fontawesome -->
     <script src="https://kit.fontawesome.com/be0f6fe16e.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Eget script -->
     <script src="js/js/main.js"></script>
 </body>
 

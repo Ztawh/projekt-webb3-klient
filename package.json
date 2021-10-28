@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@types/jquery": "^3.5.8",
     "browser-sync": "^2.27.5",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^8.0.0",
@@ -29,5 +30,4 @@
   "dependencies": {
     "gulp-cli": "^2.3.0"
   }
-
 }

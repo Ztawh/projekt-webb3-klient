@@ -14,11 +14,10 @@ $background-gradient: linear-gradient(#001d30, #023B5F, #3A5D7B);
 $dark-color: #023B5F;
 $odd-color: #1F7DAA;
 // $link-color: rgb(255, 200, 98);
-$link-color: lighten(rgb(74, 44, 75), 70);
-$green: rgb(74, 44, 75);
-
-// Mixins
-
+$link-color: rgb(253, 205, 116);
+$link-hover: lighten(rgb(253, 205, 116), 20);
+$button-color: darken(rgb(253, 205, 116), 20);
+$button-hover: darken(rgb(253, 205, 116), 30);
 
 // Mixins
 @mixin desktop {
@@ -33,7 +32,13 @@ $green: rgb(74, 44, 75);
     }
 }
 
-@mixin small-table {
+@mixin bigger-than-700 {
+    @media screen and (min-width: 700px){
+        @content;
+    }
+}
+
+@mixin small-device {
     @media screen and (max-width: 700px){
         @content;
     }

@@ -3,9 +3,42 @@ header {
     text-align: center;
     padding: 4rem 0;
     background: $background-gradient;
+
+    @include mobile {
+
+        padding: 4rem 0.5rem;
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+// Navigation
+.nav-container{
+    // background: $background-color;
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    z-index: 9999;
+    width: 100%;
+    
+
+    @include bigger-than-700 {
+        background: $background-color;
+    }
+
+    @include small-device {
+        display: block;
+    }
 }
 
 nav {
+    
+
     ul {
         list-style-type: none;
         width: fit-content;
@@ -14,16 +47,70 @@ nav {
 
     a {
         padding: 1rem;
-        color: white;
+        color: $link-color;
         font-size: 1.2rem;
         text-decoration: none;
+        transition: 0.2s;
+
+        @include desktop {
+            &:hover {
+                color: $link-hover;
+            }
+        }
     }
 }
+
+#hamburger-icon {
+
+    // background: $background-color;
+    // position: sticky;
+    // top: 0;
+    // padding: 0.5rem;
+    // z-index: 9999;
+
+    @extend .nav-container;
+    // position: relative;
+    background: $background-color;
+    padding: 0;
+    padding-right: 1rem;
+    text-align: right;
+    color: $link-color;
+    font-size: 2.5rem;
+
+}
+
+#navigation {
+    // width: 100%;
+    @include small-device {
+        display: block;
+        background: $background-color;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        right: 0;
+
+        .flex-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        a {
+            padding: 0.7rem;
+            display: flex;
+            
+        }
+    }
+}
+
 
 main {
     max-width: 900px;
     margin: auto;
     padding: 3rem 1rem 2rem 1rem;
+
+    @include mobile {
+        padding: 2rem 0.5rem 2rem 0.5rem;
+    }
 }
 
 #intro-text {
@@ -33,6 +120,11 @@ main {
     padding: 4rem;
     flex: 2;
 
+    @include mobile {
+        padding: 1.2rem;
+        border-radius: 30px;
+    }
+
     h2 {
         text-align: left;
     }
@@ -40,7 +132,7 @@ main {
 
 .img-container {
     flex: 1;
-   
+    margin: 4rem 0 0 1rem;
 
     img {
         // width: 100%;
@@ -54,7 +146,8 @@ main {
 
 section {
     width: 100%;
-    margin: 1rem auto 4rem auto;
+    margin: 0 auto 4rem auto;
+    padding-top: 2rem;
 
     h2 {
         text-align: center;
@@ -69,6 +162,27 @@ section {
     i {
         font-size: 3rem;
         margin: 0.5rem;
+    }
+
+    .img-icon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin: 0.5rem;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    #icon-container {
+        width: fit-content;
+        margin: auto;
+    }
+
+    p {
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -111,6 +225,56 @@ table {
     }
 }
 
+// Tabell på enheter mindre än 700px
+@include small-device {
+    table {
+        width: 100%;
+
+        .center {
+            text-align: unset;
+        }
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .school-title, .code-title, .name-title, .start-title, .end-title {
+        text-align: left;
+    }
+
+    // Ersätter titlarna med before
+    .school-title::before {
+        content: "Skola: ";
+        font-weight: bold;
+    }
+
+    .code-title::before {
+        content: "Kurskod: ";
+        font-weight: bold;
+    }
+
+    .name-title::before {
+        content: "Kursnamn: ";
+        font-weight: bold;
+    }
+
+    .start-title::before {
+        content: "Start år/månad: ";
+        font-weight: bold;
+    }
+
+    .end-title::before {
+        content: "Slut år/månad: ";
+        font-weight: bold;
+    }
+}
+
 // Jobb / webbsidor
 // Gör varannan blå
 .job:nth-of-type(odd), .website:nth-of-type(odd) {
@@ -119,7 +283,7 @@ table {
 
 // Jobb
 .job {
-    padding: 1.5rem;
+    
 
     .job-headers {
         margin-right: 1rem;
@@ -139,7 +303,7 @@ table {
 
 // Webbsidor
 .website {
-    padding: 1.5rem;
+    
 
     .website-title {
         flex: 1;
@@ -166,6 +330,21 @@ table {
     }
 }
 
+.website, .job {
+    padding: 1.5rem;
+
+    @include mobile {
+        padding: 1rem;
+        .flex-container {
+            flex-direction: column;
+        }
+
+        h5 {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
 // About
 
 #about-h2 {
@@ -177,10 +356,80 @@ table {
 
     h2 {
         text-align: center;
+        
     }
 
     h3 {
         background: transparent;
         color: black;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// Footer {
+    footer {
+        text-align: center;
+        color: white;
+        padding: 2rem;
+
+        a {
+            color: $link-color;
+            @include desktop {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                font-size: 2rem;
+                margin: 1rem;
+            }
+        }
+
+        
+
+        
+    }
+
+// MEdia
+.intro-container, .about-container {
+    position: relative;
+    @include small-device {
+        flex-direction: column;
+        margin-bottom: 5rem;
+
+        .img-container {
+            position: absolute;
+            bottom: -5.5rem;
+            right: 2rem;
+            margin: auto;
+        }
+    }
+
+    @include mobile {
+        margin-bottom: 8rem;
+        .img-container {
+            bottom: -7rem;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+    }
+}
+
+.hide-desktop {
+    display: none;
+
+    @include small-device {
+        display: block;
+    }
+}
+
+.hide-tablet {
+    @include small-device {
+        display: none;
     }
 }

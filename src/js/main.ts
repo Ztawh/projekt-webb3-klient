@@ -5,11 +5,31 @@ console.log(variabel);
 let coursesEl = document.getElementById("courses");
 let jobsEl = document.getElementById("jobs");
 let portfolioEl = document.getElementById("portfolio");
+let hamburgerEl = document.getElementById("hamburger-icon");
+let navEl = document.getElementById("navigation");
 
 // Lyssnare
 window.addEventListener("load", getCourses);
 window.addEventListener("load", getJobs);
 window.addEventListener("load", getPortfolio);
+
+// Göm menyn när sidan laddas
+window.addEventListener("load", () => {
+    navEl.style.display = "none";
+})
+
+
+
+
+// Hamburgemeny-ikon
+hamburgerEl.addEventListener("click", toggleNav);
+
+
+// Togglar navbaren
+function toggleNav() {
+    $("#navigation").slideToggle();
+}
+
 
 // Hämta alla kurser
 function getCourses() {

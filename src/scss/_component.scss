@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     background: $dark-color;
     color: white;
     padding: 0.5rem;
@@ -74,9 +74,16 @@ textarea {
 
 .submit-btn {
     width: 150px;
-    background: $green;
+    background: $button-color;
     color: white;
     padding: 0.5rem;
     margin-left: auto;
     margin-top: 1rem;
+
+    @include desktop {
+        &:hover {
+            background: $button-hover;
+            cursor: pointer;
+        }
+    }
 }
