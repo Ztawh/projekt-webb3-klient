@@ -1,6 +1,6 @@
 {
     "files": ["src/js/main.ts"],
     "compilerOptions": {
-      "target": "es2020"
+      "target": "es2021"
     }
   }

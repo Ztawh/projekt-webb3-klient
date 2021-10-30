@@ -5,7 +5,6 @@ header {
     background: $background-gradient;
 
     @include mobile {
-
         padding: 4rem 0.5rem;
 
         h1 {
@@ -15,17 +14,13 @@ header {
     }
 }
 
-
-
 // Navigation
 .nav-container{
-    // background: $background-color;
     position: sticky;
     top: 0;
     padding: 0.5rem;
     z-index: 9999;
     width: 100%;
-    
 
     @include bigger-than-700 {
         background: $background-color;
@@ -37,8 +32,6 @@ header {
 }
 
 nav {
-    
-
     ul {
         list-style-type: none;
         width: fit-content;
@@ -60,27 +53,18 @@ nav {
     }
 }
 
+// Hamburger-meny
 #hamburger-icon {
-
-    // background: $background-color;
-    // position: sticky;
-    // top: 0;
-    // padding: 0.5rem;
-    // z-index: 9999;
-
     @extend .nav-container;
-    // position: relative;
     background: $background-color;
     padding: 0;
     padding-right: 1rem;
     text-align: right;
     color: $link-color;
     font-size: 2.5rem;
-
 }
 
 #navigation {
-    // width: 100%;
     @include small-device {
         display: block;
         background: $background-color;
@@ -102,7 +86,7 @@ nav {
     }
 }
 
-
+// Huvudinnehåll
 main {
     max-width: 900px;
     margin: auto;
@@ -113,6 +97,7 @@ main {
     }
 }
 
+// Välkomsttext
 #intro-text {
     background: white;
     border-radius: 60px;
@@ -130,12 +115,12 @@ main {
     }
 }
 
+// Profilbilder
 .img-container {
     flex: 1;
     margin: 4rem 0 0 1rem;
 
     img {
-        // width: 100%;
         width: 200px;
         height: 200px;
         object-fit: cover;
@@ -144,6 +129,7 @@ main {
     }
 }
 
+// Sektioner
 section {
     width: 100%;
     margin: 0 auto 4rem auto;
@@ -283,8 +269,6 @@ table {
 
 // Jobb
 .job {
-    
-
     .job-headers {
         margin-right: 1rem;
         flex: 1;
@@ -303,8 +287,6 @@ table {
 
 // Webbsidor
 .website {
-    
-
     .website-title {
         flex: 1;
     }
@@ -346,13 +328,12 @@ table {
 }
 
 // About
-
 #about-h2 {
     text-align: center;
 }
 
 #about-text {
-    @extend #intro-text;
+    @extend #intro-text; // Ärver regler från välkomsttexten
 
     h2 {
         text-align: center;
@@ -367,32 +348,45 @@ table {
     }
 }
 
-// Footer {
-    footer {
-        text-align: center;
-        color: white;
-        padding: 2rem;
+// Kontakt
+#contact-section{
+    max-width: 500px;
 
-        a {
-            color: $link-color;
-            @include desktop {
-                &:hover {
-                    cursor: pointer;
-                }
+    a {
+        color: $link-color;
+        transition: 0.2s;
+
+        @include desktop {
+            &:hover {
+                letter-spacing: 0.5px;
             }
+        }
+    }
+}
 
-            i {
-                font-size: 2rem;
-                margin: 1rem;
+// Footer {
+footer {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+
+    a {
+        color: $link-color;
+        @include desktop {
+            &:hover {
+                cursor: pointer;
             }
         }
 
-        
-
-        
+        i {
+            font-size: 2rem;
+            margin: 1rem;
+        }
     }
+}
 
 // MEdia
+// Välkomsttext och about-text
 .intro-container, .about-container {
     position: relative;
     @include small-device {
@@ -420,6 +414,7 @@ table {
     }
 }
 
+// Visa/göm mobilmeny
 .hide-desktop {
     display: none;
 
@@ -428,6 +423,7 @@ table {
     }
 }
 
+// Visa/göm desktop-meny
 .hide-tablet {
     @include small-device {
         display: none;

@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amandas CV/Portfolio</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="scss/main.css">
+    <!-- Favicon -->
     <link rel="icon" type="images/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="images/png" sizes="16x16" href="images/favicon-16x16.png">
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <h1>amandas portfolio</h1>
     </header>
+    <!-- Hamburger-ikon -->
     <div id="hamburger-icon" class="hide-desktop"><i class="fas fa-bars"></i></div>
 
+    <!-- Mobilmeny -->
     <div class="nav-container hide-desktop">
-        
         <nav id="navigation">
             <ul class="flex-container">
                 <li><a href="#courses-h2">utbildning</a></li>
@@ -29,6 +33,7 @@
         </nav>
     </div>
 
+    <!-- Desktop meny -->
     <div class="nav-container hide-tablet">
         <nav>
             <ul class="flex-container">
@@ -41,8 +46,10 @@
         </nav>
     </div>
 
+    <!-- Huvudinnehåll -->
     <main>
         <div class="flex-container intro-container">
+            <!-- Välkomsttext -->
             <section id="intro-text">
                 <h2>Välkommen!</h2>
                 <p>Vad kul att du har hittat in här! Mitt namn är Amanda Hwatz Björkholm och detta är mitt CV/Portfolio.
@@ -58,6 +65,7 @@
             <div class="img-container"><img src="images/profile-1.jpeg" alt="Foto på Amanda"></div>
         </div>
 
+        <!-- Kompetenser - ikoner -->
         <section id="icon-section">
             <h2>Kompetenser</h2>
             <div id="icon-container">
@@ -73,6 +81,7 @@
             </div>
         </section>
 
+        <!-- Utbildning -->
         <section>
             <h2 id="courses-h2">Utbildning</h2>
             <div>
@@ -81,6 +90,7 @@
             </div>
         </section>
 
+        <!-- Anställningar -->
         <section>
             <h2 id="jobs-h2">Anställningar</h2>
             <div>
@@ -89,6 +99,7 @@
             </div>
         </section>
 
+        <!-- Portfolio -->
         <section>
             <h2 id="portfolio-h2">Portfolio</h2>
             <div>
@@ -97,6 +108,7 @@
             </div>
         </section>
 
+        <!-- Om mig -->
         <div>
             <h2 id="about-h2">Om mig</h2>
             <div class="flex-container about-container">
@@ -112,13 +124,16 @@
                     <p>Efter åtta år på Kappahl har jag äntligen sadlat om och ser mycket fram emot att börja arbeta
                         som webbutvecklare!</p>
                 </section>
-
             </div>
         </div>
 
-        <section>
+        <!-- Kontakt -->
+        <section id="contact-section">
             <h2 id="contact-h2">Kontakt</h2>
+            
             <div>
+                <p>Kontakta mig gärna på min e-postadress <a href="mailto:amandahwatz@gmail.com">amandahwatz@gmail.com</a> eller så kan du skriva
+                    din fråga i formuläret nedan. </p>
                 <form>
                     <label for="email">e-post</label>
                     <input type="text" id="email" placeholder="andersson@gmail.com">

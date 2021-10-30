@@ -1,5 +1,3 @@
-let variabel: string = "hejsan";
-console.log(variabel);
 
 // Variabler
 let coursesEl = document.getElementById("courses");
@@ -26,7 +24,6 @@ hamburgerEl.addEventListener("click", toggleNav);
 function toggleNav() {
     $("#navigation").slideToggle();
 }
-
 
 // Hämta alla kurser
 function getCourses() {
@@ -57,15 +54,13 @@ function getCourses() {
                 }
 
                 // Ta bort sista tre tecken så endast år och månad skrivs ut
-                let startDate = courses.start_date;
+                let startDate :string = courses.start_date;
                 startDate = startDate.slice(0, -3);
 
-                //let school = escapeHtml(courses.school);
-
                 // Ersätt eventuella enkelfnuttar i strängen med \
-                let school = courses.school;
-                let courseId = courses.course_id;
-                let name = courses.name;
+                let school :string = courses.school;
+                let courseId :string = courses.course_id;
+                let name :string = courses.name;
                 school = school.replaceAll("'", "\\'");
                 courseId = courseId.replaceAll("'", "\\'");
                 name = name.replaceAll("'", "\\'");
@@ -80,8 +75,6 @@ function getCourses() {
     
                 <td class="center start-title">${startDate}</td>
                 <td class="center end-title">${endDate}</td>
-                
-                
             </tr>
             `;
             })
@@ -93,13 +86,13 @@ function getCourses() {
 function getJobs() {
     jobsEl.innerHTML = "";
 
-    // Hämta alla kurser från webbtjänsten med fetch
+    // Hämta alla jobb från webbtjänsten med fetch
     fetch("https://studenter.miun.se/~amhv2000/writeable/projekt-webbtjanst/jobs.php")
         .then(response => response.json())
         .then(data => {
             data.forEach(jobs => {
                 // Om slutdatum är 0 är det det nuvarnade jobbet
-                let endDate = jobs.end_date;
+                let endDate :string = jobs.end_date;
                 if (endDate == "0000-00-00") {
                     endDate = "Nuvarande";
                 } else {
@@ -107,13 +100,13 @@ function getJobs() {
                 }
 
                 // Ta bort sista tre tecken så endast år och månad skrivs ut
-                let startDate = jobs.start_date;
+                let startDate :string = jobs.start_date;
                 startDate = startDate.slice(0, -3);
 
                 // Tar bort eventuella enkelfnuttar
-                let workplace = jobs.workplace;
-                let title = jobs.title;
-                let desc = jobs.description;
+                let workplace :string = jobs.workplace;
+                let title :string = jobs.title;
+                let desc :string = jobs.description;
                 workplace = workplace.replaceAll("'", "\\'");
                 title = title.replaceAll("'", "\\'");
                 desc = desc.replaceAll("'", "\\'");
@@ -131,12 +124,9 @@ function getJobs() {
                     </div>
                 </div>
                 <span><b>Period: </b> ${startDate} till ${endDate}</span>
-                
-                
             </div>
             `;
             })
-
         });
 }
 
@@ -144,16 +134,16 @@ function getJobs() {
 function getPortfolio() {
     portfolioEl.innerHTML = "";
 
-    // Hämta alla kurser från webbtjänsten med fetch
+    // Hämta alla webbsidor från webbtjänsten med fetch
     fetch("https://studenter.miun.se/~amhv2000/writeable/projekt-webbtjanst/websites.php")
         .then(response => response.json())
         .then(data => {
             data.forEach(websites => {
 
                 // Tar bort eventuella enkelfnuttar
-                let title = websites.title;
-                let url = websites.url;
-                let desc = websites.description;
+                let title :string = websites.title;
+                let url :string = websites.url;
+                let desc :string = websites.description;
                 title = title.replaceAll("'", "\\'");
                 url = url.replaceAll("'", "\\'");
                 desc = desc.replaceAll("'", "\\'");
@@ -169,10 +159,8 @@ function getPortfolio() {
                 <div class="link-container">
                     <a href="${websites.url}">Gå till webbplats ></a>
                 </div>
-                
             </div>
             `;
             })
-
         });
 }
