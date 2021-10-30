@@ -157,7 +157,7 @@ function getPortfolio() {
                 </div>
 
                 <div class="link-container">
-                    <a href="${websites.url}">Gå till webbplats ></a>
+                    <a href="${websites.url}" target="_blank">Gå till webbplats ></a>
                 </div>
             </div>
             `;
