@@ -17,6 +17,7 @@ Skriv i din terminal kommandot:
 git clone https://github.com/Ztawh/projekt-webb3-klient.git
 
 För att gulp ska fungera behöver du ha Node.js och npm installerat på datorn.
+Skriv sen npm install för att installera alla paket och få en node_modules-mapp.
 Skriv sen gulp i terminalen så ska automatiseringen vara igång.
 
 ### Länkar
